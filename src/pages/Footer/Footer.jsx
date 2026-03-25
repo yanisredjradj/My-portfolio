@@ -1,5 +1,6 @@
 import "./Footer.css"
-import { FaInstagram, FaDiscord } from "react-icons/fa";
+import { FaInstagram, FaDiscord, FaTiktok, FaSnapchatGhost, FaFacebook, FaWhatsapp, FaTelegram, FaGithub } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 
 function Footer(){
   return(
@@ -9,6 +10,13 @@ function Footer(){
         <div className="social-icons">
           <a href="https://www.instagram.com/yanis_redjradj" target="_blank" rel="noreferrer"><FaInstagram/></a>
           <a href="https://discord.com/users/yanis_rj" target="_blank" rel="noreferrer"><FaDiscord/></a>
+          <a href="https://www.tiktok.com/@yanis.redjradj" target="_blank" rel="noreferrer"><FaTiktok/></a>
+          <a href="https://www.snapchat.com/add/yanis.redjradj" target="_blank" rel="noreferrer"><FaSnapchatGhost/></a>
+          <a href="https://www.facebook.com/share/18XRkSPbaR/?mibextid=wwXIfr" target="_blank" rel="noreferrer"><FaFacebook/></a>
+          <a href="https://x.com/yanis_redjradj" target="_blank" rel="noreferrer"><FaXTwitter/></a>
+          <a href="https://wa.me/213676938038" target="_blank" rel="noreferrer"><FaWhatsapp/></a>
+          <a href="https://t.me/+213676938038" target="_blank" rel="noreferrer"><FaTelegram/></a>
+          <a href="https://github.com/yanisredjradj" target="_blank" rel="noreferrer"><FaGithub/></a>
         </div>
       </div>
     </footer>

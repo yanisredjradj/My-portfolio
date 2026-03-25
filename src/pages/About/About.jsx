@@ -22,8 +22,10 @@ function About() {
         </div>
         <div className="text-about">
           <p>
-            Hi, I'm Yanis RJ, a motivated Computer Science student with a strong passion for technology, football, and self-development. I enjoy learning new skills like coding, problem-solving, and building digital projects that can grow into real opportunities. At the same time, I'm dedicated to improving myself physically through the gym and mentally through discipline and consistency.
-            I'm ambitious and always aiming higher—whether it's succeeding in my studies, building a stable income, or creating my own projects in the future. I love combining creativity, strategy, and hard work to achieve my goals. My vision is to build a successful life, both financially and personally, while continuously evolving into the best version of myself.
+            Hi, I’m Yanis Redjradj, a student in 3ème Technique Math – Génie Électrique, currently preparing for my Baccalauréat.
+I’m passionate about programming, cybersecurity, and building modern digital projects. I enjoy learning how systems work, securing them, and improving my skills every day.
+My goal is to achieve a Master 2 degree and an engineering diploma in Programming, Cybersecurity, or Software Development. I aim to study abroad, especially in France, to gain high-level education and real-world experience.
+I’m focused on becoming highly skilled in tech, building impactful projects, and developing a strong professional profile. My ambition is to achieve financial independence, create my own opportunities, and grow into a successful engineer in the tech industry.
           </p>
         </div>
       </div>

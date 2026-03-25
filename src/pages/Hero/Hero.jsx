@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="hero" id="hero">
       <UnicornScene
-        projectId="kLM3mnmLXnAU5DHNMhUN"
+        projectId="qtTdjEBdXTcMWXBxlV7b"
         width="100%"
         height="900px"
         scale={1}
