@@ -122,3 +122,40 @@ ul{
     font-size: 14px;
   }
 }
+/* 1. Nav links - Underline Reveal */
+.links li a {
+  position: relative;
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.links li a:hover {
+  color: white;
+}
+
+.links li a:hover::after {
+  width: 100%;
+}
+
+/* 2. Social icons - Float effect */
+.icons li a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.icons li a:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.3));
+}
