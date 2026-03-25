@@ -107,3 +107,18 @@ ul{
     transform:scale(1.15);
     text-shadow:0 0 8px rgba(119,119,119,0.8);
 }
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+  .links {
+    display: none;
+  }
+  .icons {
+    margin-left: auto;
+    gap: 8px;
+  }
+  .icons li a {
+    font-size: 14px;
+  }
+}

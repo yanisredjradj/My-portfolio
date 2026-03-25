@@ -96,7 +96,7 @@ export default function Project() {
         ))}
 
       </div>
-
+git add . ; git commit -m "update" ; git push
     </section>
 
   );

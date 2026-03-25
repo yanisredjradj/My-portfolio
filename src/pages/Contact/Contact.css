@@ -131,3 +131,15 @@
     background:#444;
     transform:translateY(-3px);
 }
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}

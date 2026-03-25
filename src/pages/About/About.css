@@ -103,3 +103,19 @@
     color:#333333;
     text-align:left;
 }
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .photo-card {
+    width: 200px;
+    height: 250px;
+  }
+  .text-about p {
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+  }
+}

@@ -118,3 +118,12 @@
     background:#333;
     color:#fff;
 }
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+  .project-card {
+    width: 100%;
+  }
+}
