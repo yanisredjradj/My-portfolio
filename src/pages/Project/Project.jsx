@@ -1,103 +1,68 @@
 import "./Project.css";
-
-import img1 from "../../assets/images/Cleveroad.jpg";
-import img2 from "../../assets/images/portfolio-screenshot.png";
-import img3 from "../../assets/images/Weather Forecast Dashboard.jpg";
-import img4 from "../../assets/images/WordPress dashboard design concept.jpg";
-import img5 from "../../assets/images/Game Dashboard Design.jpg";
-import img6 from "../../assets/images/Task manager app.jpg";
-
+import { FaExternalLinkAlt } from "react-icons/fa";
+ 
 const projects = [
   {
-    title: "E-Commerce Website",
-    img: img1,
-    desc: "Modern online store with product filtering, cart, and payment system.",
-    skills: ["HTML", "CSS", "JavaScript"]
-  },
-
-  {
-    title: "Portfolio Website",
-    img: img2,
-    desc: "Personal portfolio to showcase my design and coding projects.",
-    skills: ["HTML", "CSS", "Bootstrap"]
-  },
-
-  {
-    title: "Weather App",
-    img: img3,
-    desc: "Responsive app showing real-time weather data using API integration.",
-    skills: ["HTML", "CSS", "API"]
-  },
-
-  {
-    title: "Blog Website",
-    img: img4,
-    desc: "Clean and simple blogging platform with markdown support.",
-    skills: ["HTML", "Tailwind", "JavaScript"]
-  },
-
-  {
-    title: "Game Landing Page",
-    img: img5,
-    desc: "Landing page for a game with animations and parallax effects.",
-    skills: ["HTML", "CSS", "GSAP"]
-  },
-
-  {
-    title: "Task Manager",
-    img: img6,
-    desc: "Task tracking web app with CRUD features and clean UI.",
-    skills: ["HTML", "CSS", "JS"]
+    title: "My Social Media",
+    url: "https://yanis-rj-links-test.vercel.app/",
+    desc: "A centralized hub for all my social media profiles — everything in one place. Password required to access: 18052009",
+    skills: ["React", "Vite", "CSS", "Vercel"]
   }
 ];
-
+ 
 export default function Project() {
-
+ 
   return (
-
+ 
     <section className="project reveal" id="project">
-
+ 
       <div className="title">
         <h2>Project</h2>
       </div>
-
-      <div className="projects-container">
-
+ 
+      <div className="projects-container projects-center">
+ 
         {projects.map((project, index) => (
-
+ 
           <div className="project-card" key={index}>
-
-            <img src={project.img} alt={project.title} />
-
+ 
+            <div className="project-preview">
+              <iframe
+                src={project.url}
+                title={project.title}
+                loading="lazy"
+                scrolling="no"
+                sandbox="allow-scripts allow-same-origin"
+              />
+              <a href={project.url} target="_blank" rel="noreferrer" className="preview-overlay">
+                <FaExternalLinkAlt /> Open
+              </a>
+            </div>
+ 
             <h3>{project.title}</h3>
-
+ 
             <p>{project.desc}</p>
-
+ 
             <div className="skills">
               {project.skills.map((skill, i) => (
-                <a href="#" key={i}>{skill}</a>
+                <span key={i}>{skill}</span>
               ))}
             </div>
-
+ 
             <div className="btns">
-
-              <a href="#" className="btn">
-                <i className="fab fa-github"></i> GitHub
+              <a href={project.url} target="_blank" rel="noreferrer" className="btn">
+                <FaExternalLinkAlt /> Live Demo
               </a>
-
-              <a href="#" className="btn">
-                <i className="fas fa-external-link-alt"></i> Live Demo
-              </a>
-
             </div>
-
+ 
           </div>
-
+ 
         ))}
-
+ 
       </div>
     </section>
-
+ 
   );
-
+ 
 }
+ 

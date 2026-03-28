@@ -1,8 +1,8 @@
 import "./Header.css"
 import { useState, useEffect } from "react"
-import { FaInstagram, FaDiscord, FaTiktok, FaSnapchatGhost, FaFacebook, FaWhatsapp, FaTelegram, FaGithub } from "react-icons/fa"
+import { FaInstagram, FaDiscord, FaTiktok, FaSnapchatGhost, FaFacebook, FaWhatsapp, FaTelegram, FaGithub, FaSpotify } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-
+ 
 function Header() {
     const [scrolled, setScrolled] = useState(false)
     useEffect(() => {
@@ -12,7 +12,7 @@ function Header() {
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
-
+ 
     return (
         <header className={scrolled ? "header scroll" : "header"}>
             <div className="logo">
@@ -35,9 +35,11 @@ function Header() {
                 <li><a href="https://wa.me/213676938038" target="_blank" rel="noreferrer"><FaWhatsapp /></a></li>
                 <li><a href="https://t.me/+213676938038" target="_blank" rel="noreferrer"><FaTelegram /></a></li>
                 <li><a href="https://github.com/yanisredjradj" target="_blank" rel="noreferrer"><FaGithub /></a></li>
+                <li><a href="https://open.spotify.com/user/31vn3tquljxh3uavv3zqmqzkx3qm?si=35295d2b7b264633" target="_blank" rel="noreferrer"><FaSpotify /></a></li>
             </ul>
         </header>
     )
 }
-
+ 
 export default Header
+ 
