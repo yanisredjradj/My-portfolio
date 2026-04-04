@@ -1,6 +1,6 @@
 ![Logo](Photo.png)
 
-# Amine Portfolio Showcase 💻
+# Yanis Portfolio Showcase 💻
 
 Welcome to Amine's Portfolio Showcase!
 A modern and elegant personal portfolio website built to present my projects, skills, and professional journey using React.js.
@@ -8,7 +8,7 @@ A modern and elegant personal portfolio website built to present my projects, sk
 
 ## Live Demo 🚀
 
-You can view the live website here: [Live Demo](https://saboo24.github.io/Portfolio11/)
+You can view the live website here: [Live Demo](https://yanisrj-portfolio.vercel.app/)
 
 ---
 
@@ -57,16 +57,10 @@ This project is licensed under the terms described in the [LICENSE](LICENSE) fil
 
 ## 📬 Contact
 
-- Email: aminehamzaoui1925@gmail.com   
-- Location: Boumerdès, Algeria  
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-amine-hamzaoui-a2453a35b/)  
-- GitHub: [GitHub](https://github.com/Saboo24)  
-- Instagram: [Instagram](https://www.instagram.com/a__m.i.n__e/?utm_source=ig_web_button_share_sheet)
+- Email: yanisredjradjyanis@gmail.com
+- Location: Souk el tenine , Bejaia , Algeria  
+- GitHub: [yanisredjradj](https://github.com/yanisredjradj)
 
 ---
 
-Made with ❤️ by **Amine Hamzaoui**
-
-
-```bash
-git clone https://github.com/Saboo24/portofolio11.git
+Made with ❤️ by **Yanis Redjradj**
