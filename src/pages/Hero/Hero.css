@@ -277,4 +277,16 @@
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
-    pad
+    padding-top: 100px;
+  }
+  .hero-img-wrapper {
+    width: 260px;
+    height: 320px;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .hero-desc {
+    margin: 0 auto;
+  }
+}
