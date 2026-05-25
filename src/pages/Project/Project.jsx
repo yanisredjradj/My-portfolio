@@ -11,10 +11,16 @@ const projects = [
   {
     title: "Google Secure Auth",
     url: "https://google-secure-auth.onrender.com/",
-    desc: "A sophisticated Social Engineering & Phishing simulation tool designed for educational purposes. This project demonstrates how attackers use 'Visual Deception' to clone official login pages. It features real-time data exfiltration to Telegram, including advanced telemetry like device battery level, IP-based geolocation, and User-Agent tracking to bypass basic sandbox detections.",
+    desc: "A Social Engineering & Phishing simulation tool built for educational purposes, demonstrating visual deception techniques and advanced telemetry.",
     skills: ["Python", "Flask", "JavaScript", "Render"]
-  }
-];
+  },
+  {
+    title: "Yanis Fit",
+    url: "https://yanis-fit.vercel.app/",
+    desc: "A fitness tracking app.",
+    skills: ["React", "Vite", "CSS", "Vercel"]
+  },
+]
 
 export default function Project() {
   return (
