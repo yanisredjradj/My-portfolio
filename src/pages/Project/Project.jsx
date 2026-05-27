@@ -20,7 +20,7 @@ const projects = [
     desc: "A fitness tracking app.",
     skills: ["React", "Vite", "CSS", "Vercel"]
   },
-]
+];
 
 export default function Project() {
   return (
@@ -29,9 +29,10 @@ export default function Project() {
         <h2>Project</h2>
       </div>
 
-      <div className="projects-container projects-center">
+      <div className="projects-grid">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+          <div className="project-card reveal" key={index}
+            style={{ transitionDelay: `${index * 0.15}s` }}>
             <div className="project-preview">
               <iframe
                 src={project.url}
@@ -48,7 +49,7 @@ export default function Project() {
             <h3>{project.title}</h3>
             <p>{project.desc}</p>
 
-            <div className="skills">
+            <div className="proj-skills">
               {project.skills.map((skill, i) => (
                 <span key={i}>{skill}</span>
               ))}

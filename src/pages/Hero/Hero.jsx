@@ -48,14 +48,15 @@ export default function Hero() {
   return (
     <div className="hero" id="hero">
 
-      {/* GRID */}
       <div className="hero-grid"></div>
+      <div className="hero-blob1"></div>
+      <div className="hero-blob2"></div>
 
-      {/* MAIN CONTENT */}
       <div className="hero-container">
 
         {/* LEFT */}
         <div className="hero-left">
+
           <span className="hero-tag">Portfolio 2026</span>
 
           <h1>
@@ -68,27 +69,47 @@ export default function Hero() {
             <span className="cursor"></span>
           </p>
 
+          <div className="hero-divider"></div>
+
           <p className="hero-desc">
             Passionate about building modern digital experiences,
-            securing systems, and learning every single day.
+            securing systems, and growing every single day.
           </p>
+
+          <div className="hero-stats">
+            <div className="stat">
+              <span className="stat-num">3+</span>
+              <span className="stat-label">Projects</span>
+            </div>
+            <div className="stat">
+              <span className="stat-num">2+</span>
+              <span className="stat-label">Years Learning</span>
+            </div>
+            <div className="stat">
+              <span className="stat-num">6+</span>
+              <span className="stat-label">Technologies</span>
+            </div>
+          </div>
 
           <div className="hero-btns">
             <a href="#contact">Contact Me</a>
             <a href="#about">Who Am I</a>
           </div>
+
         </div>
 
-        {/* RIGHT IMAGE */}
+        {/* RIGHT */}
         <div className="hero-right">
-          <div className="hero-img-wrapper">
-            <img src="hero.png" alt="Yanis" />
-          </div>
+          <img
+            src="hero.png"
+            alt="Yanis Redjradj"
+            className="hero-img"
+          />
         </div>
 
       </div>
 
-      {/* SCROLL INDICATOR */}
+      {/* SCROLL */}
       <div className="scroll-indicator">
         <span>Scroll</span>
         <div className="scroll-line"></div>
