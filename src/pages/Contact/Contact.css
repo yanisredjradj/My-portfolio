@@ -4,11 +4,8 @@
   padding: 40px;
 }
 
-.title {
-  text-align: center;
-  font-size: 40px;
-  color: #393838;
-  margin-bottom: 60px;
+.title h2 {
+  color: #e0e0e0;
 }
 
 .title::after {
@@ -33,11 +30,11 @@
 .contact-info h3 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #202020;
+  color: #e0e0e0;
 }
 
 .contact-info p {
-  color: #242424;
+  color: #aaaaaa;
   margin-bottom: 30px;
 }
 
@@ -47,12 +44,12 @@
   gap: 15px;
   margin-bottom: 20px;
   font-size: 16px;
-  color: #232222;
+  color: #aaaaaa;
 }
 
 .contact-icon {
   font-size: 22px;
-  color: #777777;
+  color: #777;
   animation: iconFloat 3s ease-in-out infinite;
   transition: 0.3s;
 }

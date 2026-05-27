@@ -14,18 +14,18 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   z-index: 0;
 }
 
-/* AURORA BLOBS */
+/* BLOBS */
 .hero-blob1 {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0,0,0,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
   top: -150px;
   left: -150px;
   border-radius: 50%;
@@ -37,7 +37,7 @@
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0,0,0,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
   bottom: -100px;
   right: 200px;
   border-radius: 50%;
@@ -82,7 +82,7 @@
   font-size: 11px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.4);
+  color: rgba(255,255,255,0.4);
   animation: fadeLeft 0.8s ease forwards;
   opacity: 0;
 }
@@ -92,13 +92,13 @@
   display: inline-block;
   width: 30px;
   height: 1px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.2);
 }
 
 .hero-left h1 {
   font-size: clamp(42px, 5.5vw, 75px);
   font-weight: 800;
-  color: #111;
+  color: #fff;
   line-height: 1.05;
   margin: 0;
   animation: fadeLeft 0.8s ease 0.15s forwards;
@@ -107,12 +107,12 @@
 }
 
 .hero-left h1 span {
-  color: #666;
+  color: #444;
 }
 
 .hero-typewriter {
   font-size: clamp(15px, 1.8vw, 20px);
-  color: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,0.5);
   min-height: 30px;
   animation: fadeLeft 0.8s ease 0.3s forwards;
   opacity: 0;
@@ -123,7 +123,7 @@
   display: inline-block;
   width: 2px;
   height: 0.9em;
-  background: rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.6);
   margin-left: 3px;
   vertical-align: text-bottom;
   animation: blink 0.8s step-end infinite;
@@ -131,7 +131,7 @@
 
 .hero-desc {
   font-size: 14px;
-  color: rgba(0,0,0,0.4);
+  color: rgba(255,255,255,0.3);
   line-height: 1.9;
   max-width: 400px;
   animation: fadeLeft 0.8s ease 0.45s forwards;
@@ -155,12 +155,12 @@
 .stat-num {
   font-size: 24px;
   font-weight: 700;
-  color: #111;
+  color: #fff;
 }
 
 .stat-label {
   font-size: 11px;
-  color: rgba(0,0,0,0.35);
+  color: rgba(255,255,255,0.3);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -169,7 +169,7 @@
 .hero-divider {
   width: 40px;
   height: 1px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.1);
   animation: fadeLeft 0.8s ease 0.5s forwards;
   opacity: 0;
 }
@@ -193,24 +193,24 @@
 }
 
 .hero-btns a:first-child {
-  background: rgba(0,0,0,0.08);
-  color: #111;
-  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
   backdrop-filter: blur(10px);
 }
 
 .hero-btns a:last-child {
   background: transparent;
-  color: rgba(0,0,0,0.4);
-  border: 1px solid rgba(0,0,0,0.1);
+  color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .hero-btns a:hover {
-  background: rgba(0,0,0,0.12);
-  color: #000;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  border-color: rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.2);
 }
 
 /* RIGHT IMAGE */
@@ -234,7 +234,7 @@
   transform: translateX(-50%);
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(0,0,0,0.06) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 65%);
   border-radius: 50%;
   animation: glowPulse 5s ease-in-out infinite alternate;
   z-index: 0;
@@ -249,7 +249,7 @@
   transform: translateX(-50%);
   width: 380px;
   height: 380px;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,255,255,0.04);
   border-radius: 50%;
   z-index: 0;
 }
@@ -269,7 +269,7 @@
   object-fit: contain;
   object-position: bottom;
   z-index: 1;
-  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 30px 80px rgba(0,0,0,0.9));
   animation: float 6s ease-in-out infinite;
 }
 
@@ -296,14 +296,14 @@
 .scroll-indicator span {
   font-size: 10px;
   letter-spacing: 4px;
-  color: rgba(0,0,0,0.25);
+  color: rgba(255,255,255,0.2);
   text-transform: uppercase;
 }
 
 .scroll-line {
   width: 1px;
   height: 45px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), transparent);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
   animation: scrollLine 2s ease-in-out infinite;
 }
 
