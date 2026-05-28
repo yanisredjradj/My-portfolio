@@ -7,9 +7,12 @@
 .title {
   margin-bottom: 70px;
   font-size: 42px;
-  color: #e0e0e0;
   text-align: center;
   position: relative;
+}
+
+.title h2 {
+  color: #e0e0e0;
 }
 
 .title::after {
@@ -61,7 +64,6 @@
   height: 100%;
   border-radius: 12px;
   object-fit: cover;
-  filter: grayscale(20%);
   transition: 0.4s;
   box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
@@ -93,9 +95,13 @@
 .text-about p {
   font-size: 18px;
   line-height: 1.9;
-  color: #aaaaaa;
-  text-align: left;
+  color: #aaa;
 }
+
+/* LIGHT THEME */
+body.light .title h2 { color: #111; }
+body.light .title::after { background: #888; }
+body.light .text-about p { color: #333; }
 
 @media (max-width: 768px) {
   .content {
@@ -109,7 +115,10 @@
   }
   .text-about p {
     font-size: 14px;
-    line-height: 1.8;
-    text-align: left;
   }
 }
+
+body.light .title h2 { color: #111 !important; }
+body.light .text-about p { color: #222 !important; }
+body.light .skills h3 { color: #333 !important; }
+body.light .skills-track svg { color: #333 !important; }

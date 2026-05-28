@@ -1,0 +1,152 @@
+body:has(.cursor-ring) * {
+  cursor: none !important;
+}
+
+/* CURSOR */
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease,
+              border-color 0.2s ease, background 0.2s ease;
+  will-change: left, top;
+}
+
+.cursor-ring.clicking {
+  width: 24px;
+  height: 24px;
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.9);
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+}
+
+/* TOGGLE */
+.cursor-toggle {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99998;
+  width: 42px;
+  height: 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  padding: 3px;
+  cursor: pointer !important;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+}
+
+.cursor-toggle.on {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.3);
+  justify-content: flex-end;
+}
+
+.cursor-toggle.off {
+  justify-content: flex-start;
+}
+
+.toggle-knob {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.cursor-toggle.on .toggle-knob {
+  background: white;
+  box-shadow: 0 0 6px rgba(255,255,255,0.5);
+}
+
+.cursor-toggle.off .toggle-knob {
+  background: rgba(255,255,255,0.3);
+}
+
+/* LIGHT THEME */
+body.light .cursor-toggle {
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.15);
+}
+
+body.light .cursor-toggle.on {
+  background: rgba(0,0,0,0.15);
+  border-color: rgba(0,0,0,0.25);
+}
+
+body.light .cursor-toggle.on .toggle-knob {
+  background: #222;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+body.light .cursor-toggle.off .toggle-knob {
+  background: rgba(0,0,0,0.2);
+}
+
+body.light .cursor-ring {
+  border-color: rgba(0,0,0,0.5);
+}
+
+body.light .cursor-ring.clicking {
+  background: rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.8);
+}
+
+body.light .cursor-dot {
+  background: #000;
+}
+
+/* TOOLTIP */
+.cursor-toggle::before {
+  content: "Custom Cursor";
+  position: absolute;
+  right: 54px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.cursor-toggle:hover::before {
+  opacity: 1;
+}
+
+body.light .cursor-toggle::before {
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+}
+
+/* HIDE ON MOBILE */
+@media (max-width: 768px) {
+  .cursor-toggle {
+    display: none !important;
+  }
+}

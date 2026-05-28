@@ -135,7 +135,7 @@ ul {
 .theme-toggle:hover {
   background: rgba(255,255,255,0.15);
   color: #fff;
-  transform: rotate(20deg);
+  transform: rotate(50deg);
 }
 
 /* SCROLL REVEAL */
@@ -291,3 +291,24 @@ body.light .contact-form button { background: #555; }
 body.light .footer { background: rgba(0,0,0,0.1); }
 body.light .footer p { color: #444; }
 body.light .social-icons a { color: #444; }
+
+/* LIGHT THEME HEADER */
+body.light .header {
+  background: rgba(255,255,255,0.6) !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+body.light .header.scroll {
+  background: rgba(255,255,255,0.8) !important;
+}
+
+body.light .logo h1 { color: #111 !important; }
+body.light .logo h1 span { color: #888 !important; }
+body.light .links li a { color: #222 !important; }
+body.light .links li a::after { background-color: #000 !important; }
+body.light .icons li a { color: #222 !important; }
+body.light .theme-toggle {
+  background: rgba(0,0,0,0.08) !important;
+  border-color: rgba(0,0,0,0.15) !important;
+  color: #222 !important;
+}

@@ -6,12 +6,14 @@ import Services from "./pages/Services/Services"
 import Contact from "./pages/Contact/Contact"
 import Footer from "./pages/Footer/Footer"
 import useScrollReveal from "./useScrollReveal"
+import CustomCursor from "./components/CustomCursor"
 
 function App() {
   useScrollReveal()
 
   return (
     <>
+      <CustomCursor />
       <Header />
       <Hero />
       <About />

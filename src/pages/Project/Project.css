@@ -7,16 +7,19 @@
 .title {
   margin-bottom: 70px;
   font-size: 42px;
-  color: #625f5f;
   text-align: center;
   position: relative;
+}
+
+.title h2 {
+  color: #e0e0e0;
 }
 
 .title::after {
   content: "";
   width: 120px;
   height: 3px;
-  background: #3e3e3e;
+  background: #555;
   display: block;
   margin: 15px auto 0;
   border-radius: 2px;
@@ -28,27 +31,25 @@
   gap: 30px;
 }
 
-/* CARD */
 .project-card {
   background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.35s, box-shadow 0.35s, opacity 0.7s, transform 0.7s;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.35s;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-/* IFRAME PREVIEW */
 .project-preview {
   position: relative;
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background: #eee;
+  background: #111;
 }
 
 .project-preview iframe {
@@ -56,9 +57,6 @@
   height: 100%;
   border: none;
   pointer-events: none;
-  transform: scale(1);
-  transform-origin: top left;
-  overflow: hidden;
   scrollbar-width: none;
 }
 
@@ -78,11 +76,10 @@
 }
 
 .project-preview:hover .preview-overlay {
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.5);
   color: #fff;
 }
 
-/* TEXT */
 .project-card h3 {
   font-size: 20px;
   margin: 15px;
@@ -96,7 +93,6 @@
   line-height: 1.5;
 }
 
-/* SKILLS */
 .proj-skills {
   display: flex;
   gap: 8px;
@@ -108,17 +104,16 @@
 .proj-skills span {
   font-size: 12px;
   padding: 5px 12px;
-  background: #222;
-  color: #fff;
+  background: rgba(255,255,255,0.08);
+  color: #ccc;
   border-radius: 20px;
   transition: 0.3s;
 }
 
 .proj-skills span:hover {
-  background: #555;
+  background: rgba(255,255,255,0.15);
 }
 
-/* BUTTONS */
 .btns {
   display: flex;
   justify-content: center;
@@ -132,22 +127,48 @@
   gap: 6px;
   padding: 7px 16px;
   border-radius: 25px;
-  border: 1px solid #333;
+  border: 1px solid rgba(255,255,255,0.15);
   text-decoration: none;
   font-size: 13px;
-  color: #333;
+  color: #ccc;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #333;
+  background: rgba(255,255,255,0.1);
   color: #fff;
 }
 
+/* LIGHT THEME */
+body.light .title h2 { color: #111; }
+body.light .title::after { background: #888; }
+body.light .project-card {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+body.light .project-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+body.light .project-card h3 { color: #111; }
+body.light .project-card p { color: #555; }
+body.light .proj-skills span {
+  background: rgba(0,0,0,0.08);
+  color: #333;
+}
+body.light .proj-skills span:hover {
+  background: rgba(0,0,0,0.15);
+}
+body.light .btn {
+  border-color: rgba(0,0,0,0.15);
+  color: #333;
+}
+body.light .btn:hover {
+  background: rgba(0,0,0,0.08);
+  color: #000;
+}
+
 @media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
@@ -156,3 +177,10 @@
     padding: 0 15px;
   }
 }
+
+body.light .title h2 { color: #111 !important; }
+body.light .project-card { background: rgba(255,255,255,0.6) !important; border-color: rgba(0,0,0,0.08) !important; }
+body.light .project-card h3 { color: #111 !important; }
+body.light .project-card p { color: #333 !important; }
+body.light .proj-skills span { background: rgba(0,0,0,0.08) !important; color: #222 !important; }
+body.light .btn { color: #222 !important; border-color: rgba(0,0,0,0.2) !important; }

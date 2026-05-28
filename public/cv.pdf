@@ -1,0 +1,7 @@
+<div className="hero-btns">
+  <a href="#contact">Contact Me</a>
+  <a href="#about">Who Am I</a>
+  <a href="/cv.pdf" download className="btn-cv">
+    ⬇ Download CV
+  </a>
+</div>
