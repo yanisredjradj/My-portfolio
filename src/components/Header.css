@@ -135,7 +135,71 @@ ul {
 .theme-toggle:hover {
   background: rgba(255,255,255,0.15);
   color: #fff;
-  transform: rotate(50deg);
+  transform: rotate(20deg);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #ccc;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  width: 85%;
+  background: rgba(15,15,15,0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.mobile-menu a:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
 }
 
 /* SCROLL REVEAL */
@@ -172,24 +236,7 @@ ul {
   transform: translateX(0);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .header {
-    padding: 10px 15px;
-  }
-  .links {
-    display: none;
-  }
-  .icons {
-    margin-left: auto;
-    gap: 8px;
-  }
-  .icons li a {
-    font-size: 14px;
-  }
-}
-
-/* ===== LIGHT THEME ===== */
+/* LIGHT THEME */
 body.light {
   background: radial-gradient(
     circle at center,
@@ -203,98 +250,7 @@ body.light {
 }
 
 body.light .header {
-  background: rgba(240,240,240,0.7);
-  border-color: rgba(0,0,0,0.1);
-}
-
-body.light .logo h1 { color: #222; }
-body.light .logo h1 span { color: #888; }
-body.light .links li a { color: #333; }
-body.light .links li a::after { background-color: #000; }
-body.light .icons li a { color: #333; }
-body.light .theme-toggle {
-  background: rgba(0,0,0,0.08);
-  border-color: rgba(0,0,0,0.15);
-  color: #333;
-}
-
-/* Hero Light */
-body.light .hero-tag { color: rgba(0,0,0,0.4); }
-body.light .hero-tag::before { background: rgba(0,0,0,0.2); }
-body.light .hero-left h1 { color: #111; }
-body.light .hero-left h1 span { color: #666; }
-body.light .hero-typewriter { color: rgba(0,0,0,0.5); }
-body.light .cursor { background: rgba(0,0,0,0.5); }
-body.light .hero-desc { color: rgba(0,0,0,0.4); }
-body.light .stat-num { color: #111; }
-body.light .stat-label { color: rgba(0,0,0,0.35); }
-body.light .hero-divider { background: rgba(0,0,0,0.1); }
-body.light .hero-btns a:first-child {
-  background: rgba(0,0,0,0.08);
-  color: #111;
-  border-color: rgba(0,0,0,0.15);
-}
-body.light .hero-btns a:last-child {
-  color: rgba(0,0,0,0.4);
-  border-color: rgba(0,0,0,0.1);
-}
-body.light .scroll-indicator span { color: rgba(0,0,0,0.25); }
-body.light .scroll-line {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), transparent);
-}
-body.light .hero-grid {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
-}
-
-/* About Light */
-body.light .title h2 { color: #222; }
-body.light .title::after { background: #888; }
-body.light .text-about p { color: #333; }
-body.light .skills h3 { color: #333; }
-body.light .skills-track { color: #444; }
-
-/* Services Light */
-body.light .service-card {
-  background: rgba(255,255,255,0.6);
-  border: 1px solid rgba(0,0,0,0.08);
-}
-body.light .service-card h3 { color: #222; }
-body.light .service-card p { color: #555; }
-body.light .service-icon { color: #555; }
-
-/* Projects Light */
-body.light .project-card {
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(0,0,0,0.08);
-}
-body.light .project-card h3 { color: #222; }
-body.light .project-card p { color: #555; }
-
-/* Contact Light */
-body.light .contact-info h3 { color: #222; }
-body.light .contact-info p { color: #555; }
-body.light .info-item { color: #444; }
-body.light .contact-icon { color: #666; }
-body.light .contact-form input,
-body.light .contact-form textarea {
-  background: rgba(0,0,0,0.05);
-  border-color: rgba(0,0,0,0.2);
-  color: #222;
-}
-body.light .contact-form input::placeholder,
-body.light .contact-form textarea::placeholder { color: #888; }
-body.light .contact-form button { background: #555; }
-
-/* Footer Light */
-body.light .footer { background: rgba(0,0,0,0.1); }
-body.light .footer p { color: #444; }
-body.light .social-icons a { color: #444; }
-
-/* LIGHT THEME HEADER */
-body.light .header {
-  background: rgba(255,255,255,0.6) !important;
+  background: rgba(240,240,240,0.7) !important;
   border-color: rgba(0,0,0,0.1) !important;
 }
 
@@ -307,8 +263,47 @@ body.light .logo h1 span { color: #888 !important; }
 body.light .links li a { color: #222 !important; }
 body.light .links li a::after { background-color: #000 !important; }
 body.light .icons li a { color: #222 !important; }
+
 body.light .theme-toggle {
   background: rgba(0,0,0,0.08) !important;
   border-color: rgba(0,0,0,0.15) !important;
   color: #222 !important;
+}
+
+body.light .hamburger {
+  background: rgba(0,0,0,0.06) !important;
+  border-color: rgba(0,0,0,0.15) !important;
+  color: #333 !important;
+}
+
+body.light .mobile-menu {
+  background: rgba(255,255,255,0.95) !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+body.light .mobile-menu a {
+  color: #333 !important;
+}
+
+body.light .mobile-menu a:hover {
+  background: rgba(0,0,0,0.05) !important;
+  color: #000 !important;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+  .links {
+    display: none !important;
+  }
+  .icons {
+    display: none !important;
+  }
+  .theme-toggle {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
 }

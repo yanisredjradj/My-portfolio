@@ -7,13 +7,16 @@ import Contact from "./pages/Contact/Contact"
 import Footer from "./pages/Footer/Footer"
 import useScrollReveal from "./useScrollReveal"
 import CustomCursor from "./components/CustomCursor"
+import Loader from "./components/Loader"
+import MusicPlayer from "./components/MusicPlayer"
 
 function App() {
   useScrollReveal()
-
   return (
     <>
+      <Loader />
       <CustomCursor />
+      <MusicPlayer />
       <Header />
       <Hero />
       <About />
