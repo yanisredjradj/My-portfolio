@@ -174,3 +174,22 @@ body.light .info-item span { color: #222 !important; }
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+/* DARK THEME FIX */
+body.dark .title h2 { color: #e0e0e0 !important; }
+body.dark .contact-info h3 { color: #e0e0e0 !important; }
+body.dark .contact-info p { color: #aaa !important; }
+body.dark .info-item { color: #aaa !important; }
+body.dark .info-item span { color: #aaa !important; }
+body.dark .contact-icon { color: #777 !important; }
+body.dark .info-item:hover .contact-icon { color: #fff !important; }
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background-color: #202020 !important;
+  border-color: #555 !important;
+  color: #fff !important;
+}
+body.dark .contact-form button {
+  background: #777 !important;
+  color: #fff !important;
+}

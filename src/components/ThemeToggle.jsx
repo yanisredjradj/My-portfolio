@@ -9,10 +9,8 @@ function ThemeToggle() {
   useEffect(() => {
     if (isDark) {
       document.body.classList.remove("light")
-      document.body.classList.add("dark")
       localStorage.setItem("theme", "dark")
     } else {
-      document.body.classList.remove("dark")
       document.body.classList.add("light")
       localStorage.setItem("theme", "light")
     }
@@ -22,6 +20,7 @@ function ThemeToggle() {
     <button
       className="theme-toggle"
       onClick={() => setIsDark(!isDark)}
+      title={isDark ? "Light Mode" : "Dark Mode"}
     >
       {isDark ? <FaSun /> : <FaMoon />}
     </button>
