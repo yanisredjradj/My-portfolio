@@ -301,9 +301,40 @@ body.light .mobile-menu a:hover {
     display: none !important;
   }
   .theme-toggle {
-    display: none !important;
+    display: flex !important;
   }
   .hamburger {
     display: flex !important;
   }
+}
+
+.mobile-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 8px;
+}
+
+.mobile-social a {
+  font-size: 20px;
+  color: #aaa;
+  transition: 0.3s;
+  padding: 0 !important;
+  background: none !important;
+}
+
+.mobile-social a:hover {
+  color: #fff;
+  background: none !important;
+}
+
+body.light .mobile-social {
+  border-color: rgba(0,0,0,0.08);
+}
+
+body.light .mobile-social a {
+  color: #555;
 }
