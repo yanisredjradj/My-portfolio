@@ -338,3 +338,21 @@ body.light .mobile-social {
 body.light .mobile-social a {
   color: #555;
 }
+
+.links li a.active {
+  color: #fff !important;
+}
+
+.links li a.active::after {
+  width: 100% !important;
+}
+
+body.light .links li a.active {
+  color: #000 !important;
+}
+
+@keyframes rainbowBg {
+  0%   { filter: hue-rotate(0deg); }
+  50%  { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
+}

@@ -1,9 +1,10 @@
-import { useState } from "react";
-import "./About.css";
-import Skills from "./Skills";
+import { useState } from "react"
+import "./About.css"
+import Skills from "./Skills"
+import Timeline from "./Timeline"
 
 function About() {
-  const [flip, setFlip] = useState(false);
+  const [flip, setFlip] = useState(false)
 
   return (
     <div className="about reveal" id="about">
@@ -29,15 +30,22 @@ function About() {
             systems work, securing them, and improving my skills every day. My goal is
             to achieve a Master 2 degree and an engineering diploma in Programming,
             Cybersecurity, or Software Development. I aim to study abroad, to gain
-            high-level education and real-world experience. I'm focused on becoming
-            highly skilled in tech, building impactful projects, and developing a strong
-            professional profile.
+            high-level education and real-world experience.
           </p>
         </div>
       </div>
       <Skills />
+      <Timeline />
+      <div className="wave-divider">
+        <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z"
+            fill="rgba(255,255,255,0.02)"
+          />
+        </svg>
+      </div>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

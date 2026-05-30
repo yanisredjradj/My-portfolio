@@ -146,6 +146,8 @@ body.light .cursor-toggle::before {
 
 /* HIDE ON MOBILE */
 @media (max-width: 768px) {
+  .cursor-ring,
+  .cursor-dot,
   .cursor-toggle {
     display: none !important;
   }

@@ -118,6 +118,18 @@ body.light .text-about p { color: #333; }
   }
 }
 
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 60px;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+}
+
 body.light .title h2 { color: #111 !important; }
 body.light .text-about p { color: #222 !important; }
 body.light .skills h3 { color: #333 !important; }
