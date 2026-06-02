@@ -32,9 +32,18 @@
 }
 
 .skill-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
   color: rgba(255,255,255,0.7);
   font-weight: 500;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
 }
 
 .skill-percent {

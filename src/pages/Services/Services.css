@@ -88,6 +88,30 @@ body.light .service-card p { color: #555; }
   }
 }
 
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 0 10px !important;
+    gap: 15px !important;
+  }
+
+  .service-card {
+    padding: 20px !important;
+  }
+
+  .service-icon {
+    font-size: 35px !important;
+  }
+
+  .service-card h3 {
+    font-size: 14px !important;
+  }
+
+  .service-card p {
+    font-size: 12px !important;
+  }
+}
+
 body.light .title h2 { color: #111 !important; }
 body.light .service-card { background: rgba(255,255,255,0.5) !important; border-color: rgba(0,0,0,0.1) !important; }
 body.light .service-card h3 { color: #111 !important; }

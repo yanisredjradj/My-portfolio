@@ -1,52 +1,49 @@
 import "./Services.css"
-import { FaCode, FaPalette, FaLaptopCode, FaFilm, FaShieldAlt, FaImage } from "react-icons/fa";
+import { FaCode, FaPalette, FaLaptopCode, FaFilm, FaShieldAlt, FaImage } from "react-icons/fa"
+import { useLang } from "../../context/LanguageContext"
 
 function Services() {
+  const { t } = useLang()
+
   return (
     <div className="services reveal" id="serv">
       <div className="title">
-        <h2>Services</h2>
+        <h2>{t.servicesTitle}</h2>
       </div>
-
       <div className="services-container">
         <div className="service-card reveal" style={{ transitionDelay: "0s" }}>
           <FaCode className="service-icon"/>
-          <h3>Frontend Development</h3>
-          <p>I build modern and interactive websites using React, HTML, CSS, JavaScript, Node.Js, Php, MySql and Next.js.</p>
+          <h3>{t.serv1title}</h3>
+          <p>{t.serv1desc}</p>
         </div>
-
         <div className="service-card reveal" style={{ transitionDelay: "0.1s" }}>
           <FaPalette className="service-icon"/>
-          <h3>UI Design</h3>
-          <p>Creating clean and modern user interfaces with focus on design and usability.</p>
+          <h3>{t.serv2title}</h3>
+          <p>{t.serv2desc}</p>
         </div>
-
         <div className="service-card reveal" style={{ transitionDelay: "0.2s" }}>
           <FaLaptopCode className="service-icon"/>
-          <h3>Web Applications</h3>
-          <p>Building modern web applications with dynamic features and smooth performance.</p>
+          <h3>{t.serv3title}</h3>
+          <p>{t.serv3desc}</p>
         </div>
-
         <div className="service-card reveal" style={{ transitionDelay: "0.3s" }}>
           <FaFilm className="service-icon"/>
-          <h3>Video Editing</h3>
-          <p>Professional video editing with smooth cuts, transitions, effects, and color grading for any type of content.</p>
+          <h3>{t.serv4title}</h3>
+          <p>{t.serv4desc}</p>
         </div>
-
         <div className="service-card reveal" style={{ transitionDelay: "0.4s" }}>
           <FaImage className="service-icon"/>
-          <h3>Photoshop</h3>
-          <p>Photo retouching, manipulation, graphic design, and visual content creation using Adobe Photoshop.</p>
+          <h3>{t.serv5title}</h3>
+          <p>{t.serv5desc}</p>
         </div>
-
         <div className="service-card reveal" style={{ transitionDelay: "0.5s" }}>
           <FaShieldAlt className="service-icon"/>
-          <h3>Cyber Security</h3>
-          <p>Basic security auditing, vulnerability assessment, and protecting web applications from common threats.</p>
+          <h3>{t.serv6title}</h3>
+          <p>{t.serv6desc}</p>
         </div>
       </div>
     </div>
   )
 }
 
-export default Services;
+export default Services

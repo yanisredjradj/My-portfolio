@@ -3,17 +3,19 @@ import { useState, useEffect } from "react"
 import { FaInstagram, FaDiscord, FaTiktok, FaSnapchatGhost, FaFacebook, FaWhatsapp, FaTelegram, FaGithub, FaSpotify, FaBars, FaTimes } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import ThemeToggle from "./ThemeToggle"
+import LangToggle from "./LangToggle"
+import { useLang } from "../context/LanguageContext"
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
+  const { t } = useLang()
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
-
-      const sections = ["hero", "about", "project", "serv", "contact"]
+      const sections = ["hero", "about", "project", "certificates", "serv", "contact"]
       for (const id of sections) {
         const el = document.getElementById(id)
         if (el) {
@@ -25,7 +27,6 @@ function Header() {
         }
       }
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -37,11 +38,12 @@ function Header() {
       </div>
 
       <ul className="links">
-        <li><a href="#hero" className={activeSection === "hero" ? "active" : ""}>Home</a></li>
-        <li><a href="#about" className={activeSection === "about" ? "active" : ""}>About</a></li>
-        <li><a href="#project" className={activeSection === "project" ? "active" : ""}>Project</a></li>
-        <li><a href="#serv" className={activeSection === "serv" ? "active" : ""}>Services</a></li>
-        <li><a href="#contact" className={activeSection === "contact" ? "active" : ""}>Contact</a></li>
+        <li><a href="#hero" className={activeSection === "hero" ? "active" : ""}>{t.home}</a></li>
+        <li><a href="#about" className={activeSection === "about" ? "active" : ""}>{t.about}</a></li>
+        <li><a href="#project" className={activeSection === "project" ? "active" : ""}>{t.project}</a></li>
+        <li><a href="#certificates" className={activeSection === "certificates" ? "active" : ""}>{t.certificates}</a></li>
+        <li><a href="#serv" className={activeSection === "serv" ? "active" : ""}>{t.services}</a></li>
+        <li><a href="#contact" className={activeSection === "contact" ? "active" : ""}>{t.contact}</a></li>
       </ul>
 
       <ul className="icons">
@@ -57,6 +59,7 @@ function Header() {
         <li><a href="https://open.spotify.com/user/31vn3tquljxh3uavv3zqmqzkx3qm?si=35295d2b7b264633" target="_blank" rel="noreferrer"><FaSpotify /></a></li>
       </ul>
 
+      <LangToggle />
       <ThemeToggle />
 
       <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -64,11 +67,12 @@ function Header() {
       </button>
 
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <a href="#hero" onClick={() => setMenuOpen(false)}>Home</a>
-        <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-        <a href="#project" onClick={() => setMenuOpen(false)}>Project</a>
-        <a href="#serv" onClick={() => setMenuOpen(false)}>Services</a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="#hero" className={activeSection === "hero" ? "active" : ""} onClick={() => setMenuOpen(false)}>{t.home}</a>
+        <a href="#about" className={activeSection === "about" ? "active" : ""} onClick={() => setMenuOpen(false)}>{t.about}</a>
+        <a href="#project" className={activeSection === "project" ? "active" : ""} onClick={() => setMenuOpen(false)}>{t.project}</a>
+        <a href="#certificates" className={activeSection === "certificates" ? "active" : ""} onClick={() => setMenuOpen(false)}>{t.certificates}</a>
+        <a href="#serv" className={activeSection === "serv" ? "active" : ""} onClick={() => setMenuOpen(false)}>{t.services}</a>
+        <a href="#contact" className={activeSection === "contact" ? "active" : ""} onClick={() => setMenuOpen(false)}>{t.contact}</a>
         <div className="mobile-social">
           <a href="https://www.instagram.com/yanis_redjradj" target="_blank" rel="noreferrer"><FaInstagram /></a>
           <a href="https://discord.com/users/yanis_rj" target="_blank" rel="noreferrer"><FaDiscord /></a>

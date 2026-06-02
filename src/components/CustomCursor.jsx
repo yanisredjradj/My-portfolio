@@ -8,6 +8,7 @@ function CustomCursor() {
     () => localStorage.getItem("cursor") !== "off"
   )
   const [clicking, setClicking] = useState(false)
+  const [trail, setTrail] = useState([])
 
   const mousePos = useRef({ x: 0, y: 0 })
   const ringPos = useRef({ x: 0, y: 0 })
@@ -19,6 +20,12 @@ function CustomCursor() {
       if (dotRef.current) {
         dotRef.current.style.left = e.clientX + "px"
         dotRef.current.style.top = e.clientY + "px"
+      }
+      if (enabled) {
+        setTrail(prev => [
+          ...prev.slice(-8),
+          { x: e.clientX, y: e.clientY, id: Date.now() }
+        ])
       }
     }
 
@@ -54,12 +61,19 @@ function CustomCursor() {
   }, [enabled])
 
   useEffect(() => {
+    if (trail.length === 0) return
+    const timer = setTimeout(() => {
+      setTrail(prev => prev.slice(1))
+    }, 0)
+    return () => clearTimeout(timer)
+  }, [trail])
+
+  useEffect(() => {
     localStorage.setItem("cursor", enabled ? "on" : "off")
     document.body.style.cursor = enabled ? "none" : "auto"
     if (!enabled) {
-      document.querySelectorAll("*").forEach(el => {
-        el.style.cursor = ""
-      })
+      document.querySelectorAll("*").forEach(el => el.style.cursor = "")
+      setTrail([])
     }
   }, [enabled])
 
@@ -76,6 +90,18 @@ function CustomCursor() {
 
       {enabled && (
         <>
+          {trail.map((point, i) => (
+            <div
+              key={`trail-${point.id}`}
+              className="cursor-trail"
+              style={{
+                left: point.x,
+                top: point.y,
+                opacity: (i + 1) / trail.length * 0.4,
+                transform: `translate(-50%, -50%) scale(${(i + 1) / trail.length})`,
+              }}
+            />
+          ))}
           <div ref={ringRef} className={`cursor-ring ${clicking ? "clicking" : ""}`} />
           <div ref={dotRef} className="cursor-dot" />
         </>

@@ -83,11 +83,13 @@ ul {
   transition: width 0.3s ease;
 }
 
-.links li a:hover {
+.links li a:hover,
+.links li a.active {
   color: white;
 }
 
-.links li a:hover::after {
+.links li a:hover::after,
+.links li a.active::after {
   width: 100%;
 }
 
@@ -166,14 +168,14 @@ ul {
   top: 80px;
   left: 50%;
   width: 85%;
-  background: rgba(15,15,15,0.95);
+  background: rgba(15,15,15,0.97);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   z-index: 999;
   opacity: 0;
   pointer-events: none;
@@ -190,16 +192,45 @@ ul {
 .mobile-menu a {
   text-decoration: none;
   color: #ccc;
-  font-size: 16px;
+  font-size: 15px;
   padding: 12px 16px;
   border-radius: 8px;
   transition: 0.3s;
   text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.mobile-menu a:hover {
+.mobile-menu a:last-of-type {
+  border-bottom: none;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
   background: rgba(255,255,255,0.08);
   color: #fff;
+}
+
+.mobile-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 8px;
+}
+
+.mobile-social a {
+  font-size: 20px;
+  color: #aaa !important;
+  transition: 0.3s;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+}
+
+.mobile-social a:hover {
+  color: #fff !important;
 }
 
 /* SCROLL REVEAL */
@@ -236,6 +267,13 @@ ul {
   transform: translateX(0);
 }
 
+/* RAINBOW EASTER EGG */
+@keyframes rainbowBg {
+  0%   { filter: hue-rotate(0deg); }
+  50%  { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
 /* LIGHT THEME */
 body.light {
   background: radial-gradient(
@@ -263,96 +301,45 @@ body.light .logo h1 span { color: #888 !important; }
 body.light .links li a { color: #222 !important; }
 body.light .links li a::after { background-color: #000 !important; }
 body.light .icons li a { color: #222 !important; }
-
 body.light .theme-toggle {
   background: rgba(0,0,0,0.08) !important;
   border-color: rgba(0,0,0,0.15) !important;
   color: #222 !important;
 }
-
 body.light .hamburger {
   background: rgba(0,0,0,0.06) !important;
   border-color: rgba(0,0,0,0.15) !important;
   color: #333 !important;
 }
-
 body.light .mobile-menu {
-  background: rgba(255,255,255,0.95) !important;
+  background: rgba(255,255,255,0.97) !important;
   border-color: rgba(0,0,0,0.1) !important;
 }
-
 body.light .mobile-menu a {
   color: #333 !important;
+  border-color: rgba(0,0,0,0.05) !important;
 }
-
-body.light .mobile-menu a:hover {
+body.light .mobile-menu a:hover,
+body.light .mobile-menu a.active {
   background: rgba(0,0,0,0.05) !important;
   color: #000 !important;
 }
+body.light .mobile-social a {
+  color: #555 !important;
+}
 
+/* MOBILE */
 @media (max-width: 768px) {
   .header {
     padding: 10px 15px;
+    width: 92%;
+    gap: 6px;
   }
-  .links {
-    display: none !important;
-  }
-  .icons {
-    display: none !important;
-  }
-  .theme-toggle {
-    display: flex !important;
-  }
-  .hamburger {
-    display: flex !important;
-  }
-}
 
-.mobile-social {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  margin-top: 8px;
-}
-
-.mobile-social a {
-  font-size: 20px;
-  color: #aaa;
-  transition: 0.3s;
-  padding: 0 !important;
-  background: none !important;
-}
-
-.mobile-social a:hover {
-  color: #fff;
-  background: none !important;
-}
-
-body.light .mobile-social {
-  border-color: rgba(0,0,0,0.08);
-}
-
-body.light .mobile-social a {
-  color: #555;
-}
-
-.links li a.active {
-  color: #fff !important;
-}
-
-.links li a.active::after {
-  width: 100% !important;
-}
-
-body.light .links li a.active {
-  color: #000 !important;
-}
-
-@keyframes rainbowBg {
-  0%   { filter: hue-rotate(0deg); }
-  50%  { filter: hue-rotate(180deg); }
-  100% { filter: hue-rotate(360deg); }
+  .links { display: none !important; }
+  .icons { display: none !important; }
+  .theme-toggle { display: flex !important; }
+  .hamburger { display: flex !important; }
+  .lang-toggle-wrapper { display: flex !important; }
+  .logo h1 { font-size: 18px; }
 }

@@ -28,25 +28,21 @@ function VisitorCounter() {
 
   useEffect(() => {
     const handleKey = (e) => {
-      // Ctrl+Shift+V — يظهر/يخفي العداد
       if (e.ctrlKey && e.shiftKey && e.key === "V") {
         setVisible(prev => !prev)
       }
-
-      // Ctrl+Shift+R — يعيد العداد لـ 0
       if (e.ctrlKey && e.shiftKey && e.key === "R") {
         e.preventDefault()
         fetch("https://api.counterapi.dev/v1/yanisrj-portfolio/visits/set?value=0")
           .then(res => res.json())
-          .then(data => {
+          .then(() => {
             setCount(0)
-            sessionStorage.removeItem("visited")
+            sessionStorage.setItem("visited", "true")
             alert("✅ Visitor count reset to 0!")
           })
           .catch(() => alert("❌ Failed to reset!"))
       }
     }
-
     window.addEventListener("keydown", handleKey)
     return () => window.removeEventListener("keydown", handleKey)
   }, [])

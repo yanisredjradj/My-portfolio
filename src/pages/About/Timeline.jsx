@@ -1,36 +1,19 @@
 import "./Timeline.css"
-
-const experiences = [
-  {
-    year: "2023",
-    title: "Started Learning Programming",
-    desc: "Started with HTML, CSS and JavaScript — built my first websites.",
-    icon: "🚀"
-  },
-  {
-    year: "2024",
-    title: "Learned React & Backend",
-    desc: "Dived into React, Node.js, Python and databases.",
-    icon: "⚛️"
-  },
-  {
-    year: "2025",
-    title: "Cybersecurity Interest",
-    desc: "Started learning cybersecurity, ethical hacking and web security.",
-    icon: "🔒"
-  },
-  {
-    year: "2026",
-    title: "Portfolio & Real Projects",
-    desc: "Built real projects and this portfolio to showcase my skills.",
-    icon: "💼"
-  },
-]
+import { useLang } from "../../context/LanguageContext"
 
 function Timeline() {
+  const { t } = useLang()
+
+  const experiences = [
+    { year: t.t1year, title: t.t1title, desc: t.t1desc, icon: "🚀" },
+    { year: t.t2year, title: t.t2title, desc: t.t2desc, icon: "⚛️" },
+    { year: t.t3year, title: t.t3title, desc: t.t3desc, icon: "🔒" },
+    { year: t.t4year, title: t.t4title, desc: t.t4desc, icon: "💼" },
+  ]
+
   return (
     <div className="timeline">
-      <h3>My Journey</h3>
+      <h3>{t.myJourney}</h3>
       <div className="timeline-list">
         {experiences.map((exp, i) => (
           <div className="timeline-item reveal" key={i}>

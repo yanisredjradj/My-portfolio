@@ -3,18 +3,19 @@ import emailjs from "@emailjs/browser"
 import "./Contact.css"
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
 import Toast from "../../components/Toast"
+import { useLang } from "../../context/LanguageContext"
 
 function Contact() {
   const formRef = useRef()
   const [loading, setLoading] = useState(false)
   const [toast, setToast] = useState(null)
+  const { t } = useLang()
 
   const closeToast = useCallback(() => setToast(null), [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setLoading(true)
-
     emailjs.sendForm(
       "service_l5n5zg5",
       "rv92bel",
@@ -33,15 +34,13 @@ function Contact() {
   return (
     <div className="contact reveal" id="contact">
       {toast && <Toast message={toast.message} type={toast.type} onClose={closeToast} />}
-
       <div className="title">
-        <h2>Contact Me</h2>
+        <h2>{t.contactTitle}</h2>
       </div>
-
       <div className="contact-container">
         <div className="contact-info reveal">
-          <h3>Get In Touch</h3>
-          <p>If you want to work together or have any question, feel free to contact me.</p>
+          <h3>{t.getInTouch}</h3>
+          <p>{t.getInTouchDesc}</p>
           <div className="info-item">
             <FaEnvelope className="contact-icon"/>
             <span>yanisredjradjyanis@gmail.com</span>
@@ -55,13 +54,12 @@ function Contact() {
             <span>Algeria, Bejaia, Lota</span>
           </div>
         </div>
-
         <form className="contact-form reveal" ref={formRef} onSubmit={handleSubmit}>
-          <input type="text" name="from_name" placeholder="Your Name" required />
-          <input type="email" name="from_email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+          <input type="text" name="from_name" placeholder={t.yourName} required />
+          <input type="email" name="from_email" placeholder={t.yourEmail} required />
+          <textarea name="message" placeholder={t.yourMessage} rows="6" required></textarea>
           <button type="submit" disabled={loading}>
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? t.sending : t.sendMessage}
           </button>
         </form>
       </div>

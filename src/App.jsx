@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { LanguageProvider } from "./context/LanguageContext"
 
 import Header from "./components/Header"
 import Hero from "./pages/Hero/Hero"
@@ -9,6 +10,7 @@ import Services from "./pages/Services/Services"
 import Contact from "./pages/Contact/Contact"
 import Footer from "./pages/Footer/Footer"
 import NotFound from "./pages/NotFound"
+import Certificates from "./pages/Certificates/Certificates"
 
 import CustomCursor from "./components/CustomCursor"
 import MusicPlayer from "./components/MusicPlayer"
@@ -18,7 +20,7 @@ import VisitorCounter from "./components/VisitorCounter"
 
 import useScrollReveal from "./useScrollReveal"
 
-function App() {
+function AppContent() {
   useScrollReveal()
 
   useEffect(() => {
@@ -53,6 +55,7 @@ function App() {
             <Hero />
             <About />
             <Project />
+            <Certificates />
             <Services />
             <Contact />
             <Footer />
@@ -61,6 +64,14 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   )
 }
 
