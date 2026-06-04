@@ -134,3 +134,38 @@ body.light .title h2 { color: #111 !important; }
 body.light .text-about p { color: #222 !important; }
 body.light .skills h3 { color: #333 !important; }
 body.light .skills-track svg { color: #333 !important; }
+
+@media (max-width: 768px) {
+  .about {
+    padding: 20px 16px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .photo-card {
+    width: 220px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .text-about {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .text-about p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+}

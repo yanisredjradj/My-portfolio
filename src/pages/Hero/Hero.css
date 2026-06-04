@@ -263,7 +263,7 @@
 
 @keyframes glowPulse {
   from { opacity: 0.5; transform: translateX(-50%) scale(1); }
-  to   { opacity: 1; transform: translateX(-50%) scale(1.1); }
+  to   { opacity: 1;   transform: translateX(-50%) scale(1.1); }
 }
 
 .hero-img {
@@ -389,9 +389,18 @@ body.light .hero-grid {
     flex-direction: column-reverse;
     text-align: center;
     padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
     gap: 0;
     height: 100vh;
     justify-content: center;
+    width: 100%;
+  }
+
+  .hero-left {
+    padding: 0 16px;
+    flex-shrink: 0;
+    align-items: center;
   }
 
   .hero-right {
@@ -415,29 +424,20 @@ body.light .hero-grid {
     transform: translateX(-50%) !important;
   }
 
-  .hero-left {
-    padding: 0 20px;
-    flex-shrink: 0;
-  }
-
   .hero-right::before,
-  .hero-right::after {
-    display: none;
-  }
+  .hero-right::after { display: none; }
 
   .hero-btns { justify-content: center; }
   .hero-stats { justify-content: center; }
-  .hero-desc { margin: 0 auto; }
+  .hero-desc { margin: 0 auto; text-align: center; }
   .hero-tag { justify-content: center; }
-
-  .scroll-indicator {
-    display: none !important;
-  }
+  .hero-divider { margin: 0 auto; }
+  .scroll-indicator { display: none !important; }
 }
 
 @media (max-width: 480px) {
   .hero-right { height: 30vh !important; }
-  .hero-left h1 { font-size: 38px !important; }
+  .hero-left h1 { font-size: 36px !important; }
 }
 
 /* LANDSCAPE MOBILE */
@@ -457,25 +457,20 @@ body.light .hero-grid {
     flex-shrink: 0 !important;
   }
 
-  .hero-img {
-    height: 95% !important;
-  }
+  .hero-img { height: 95% !important; }
 
   .hero-left {
     padding: 0 15px !important;
     text-align: left !important;
     flex-shrink: 1 !important;
     gap: 10px !important;
+    align-items: flex-start !important;
   }
 
   .hero-btns { justify-content: flex-start !important; }
   .hero-stats { justify-content: flex-start !important; }
   .hero-tag { justify-content: flex-start !important; }
-  .hero-desc {
-    margin: 0 !important;
-    display: none !important;
-  }
-
+  .hero-desc { margin: 0 !important; display: none !important; }
   .hero-left h1 { font-size: 28px !important; }
   .hero-divider { display: none !important; }
   .scroll-indicator { display: none !important; }
